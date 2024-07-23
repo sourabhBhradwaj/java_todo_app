@@ -1,6 +1,6 @@
 {
   "name": "to_do_app",
-  "version": "1.0.0+1",
+  "version": "1.0.0",
   "description": "Android java Node js application database",
   "main": "server.js",
   "scripts": {
@@ -21,6 +21,6 @@
     "start": "^5.1.0"
   },
   "devDependencies": {
-    "nodemon": "2.0.22"
+    "nodemon": "^2.0.22"
   }
 }

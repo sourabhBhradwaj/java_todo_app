@@ -61,15 +61,14 @@ public class MainActivity extends AppCompatActivity {
         user_profile_image = headerView.findViewById(R.id.profile_Avatar);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-                                                             @Override
-                                                             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                                                                 setDrawerClick(item.getItemId());
-                                                                 item.setChecked(true);
-                                                                 drawerLayout.close();
-                                                                 return true;
-                                                             }
-                                                         }
-        );
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                setDrawerClick(item.getItemId());
+                item.setChecked(true);
+                drawerLayout.close();
+                return true;
+            }
+        });
         initDrawer();
         getUserProfile();
 
@@ -130,18 +129,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_share:
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                String msg = "Hey! Try This Todo App";
-                sharingIntent.putExtra(Intent.EXTRA_TEXT, msg);
-                startActivity(Intent.createChooser(sharingIntent, "Sharing Via"));
-                return true;
-            case R.id.refresh_menu:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_content, new HomeFragment()).commit();
-                return true;
+//            case R.id.action_share:
+//                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+//                sharingIntent.setType("text/plain");
+//                String msg = "Hey! Try This Todo App";
+//                sharingIntent.putExtra(Intent.EXTRA_TEXT, msg);
+//                startActivity(Intent.createChooser(sharingIntent, "Sharing Via"));
+//                return true;
+//            case R.id.refresh_menu:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_content, new HomeFragment()).commit();
+//                return true;
         }
-
 
         return super.onOptionsItemSelected(item);
     }
@@ -168,19 +166,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setDrawerClick(int itemId) {
-        switch (itemId) {
-            case R.id.action_finshedTask:
-                getSupportFragmentManager().beginTransaction().
-                        replace(R.id.fragment_content, new FinishedTaskFragment()).commit();
-                break;
-            case R.id.action_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_content, new HomeFragment()).commit();
-                break;
-            case R.id.action_logout:
-                sharedPreferenceClass.clear();
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                finish();
-                break;
-        }
+//        switch (itemId) {
+//            case R.id.action_finshedTask:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_content, new FinishedTaskFragment()).commit();
+//                break;
+//            case R.id.action_home:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_content, new HomeFragment()).commit();
+//                break;
+//            case R.id.action_logout:
+//                sharedPreferenceClass.clear();
+//                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+//                finish();
+//                break;
+//        }
     }
 }

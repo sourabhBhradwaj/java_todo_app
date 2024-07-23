@@ -15,4 +15,5 @@
     <string name="drawer_close">navigation_drawer_close</string>
     <string name="add_task">Add Task</string>
     <string name="you_have_no_todo_in_a_list">You Have No Completed Todo List!!</string>
+    <string name="empty" />
 </resources>

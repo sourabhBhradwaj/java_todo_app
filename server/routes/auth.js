@@ -5,8 +5,6 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 const tokenVerify = require("../middleware/auth");
 
-
-
 authRouter.post("/register", async (req, res, next) => {
 
     console.log(req.body);
@@ -111,11 +109,6 @@ authRouter.get("/user", tokenVerify, async (req, res, next) => {
     }
 
 })
-
-
-
-
-
 
 module.exports = authRouter;
 
